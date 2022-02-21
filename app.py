@@ -4,6 +4,9 @@ import sqlite3
 #   flask
 from flask import Flask, request, jsonify
 
+#   cors
+from flask_cors import CORS
+
 #   created a db and called it Rain
 connect = sqlite3.connect('Rain.db')
 cursor = connect.cursor()
@@ -20,6 +23,7 @@ print("Rain Employee Table created Successfully")
 
 #   starting to use flask
 app = Flask(__name__)
+CORS(app)
 app.debug = True    # when a bug is found, code continues to run
 
 
