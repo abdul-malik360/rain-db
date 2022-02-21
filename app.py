@@ -2,7 +2,7 @@
 import sqlite3
 
 #   flask
-from flask import Flask, request, jsonify
+from flask import Flask, request
 
 #   cors
 from flask_cors import CORS
